@@ -12,7 +12,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import EllipsisText from "react-ellipsis-text";
 import { Projects } from "../../constants/myProject";
 
-const ShowProjects = ({loading, theme}) => {
+const ShowProjects = ({ loading, theme }) => {
   return (
     <>
       {Projects.map((project, index) => (
@@ -61,7 +61,7 @@ const ShowProjects = ({loading, theme}) => {
                     gutterBottom
                     sx={{ direction: "ltr" }}
                   >
-                    <EllipsisText text={project.info} length={"40"} />
+                    <EllipsisText text={project.info} length={40} />
                   </Typography>
                 </CardContent>
               </CardActionArea>

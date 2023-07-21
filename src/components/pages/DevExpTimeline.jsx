@@ -11,21 +11,20 @@ import {
 import { Slide, Typography } from "@mui/material";
 import { devWork } from "../../constants/details";
 
-
-const DevExpTimeline = ({loading}) => {
-  
+const DevExpTimeline = ({ loading }) => {
   return (
     <>
       <Timeline position="left" sx={{ direction: "ltr" }}>
         {devWork.map((item, index) => (
           <Slide
+            key={index}
             direction="up"
             in={loading}
             style={{
               transitionDelay: loading ? `${index + 3}99ms` : "0ms",
             }}
           >
-            <TimelineItem key={index}>
+            <TimelineItem>
               <TimelineOppositeContent color="text.secondary" sx={{ mt: 2 }}>
                 {item.year}
               </TimelineOppositeContent>

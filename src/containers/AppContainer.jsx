@@ -53,6 +53,11 @@ const AppContainer = () => {
     setPageNumber(newPage);
   };
 
+  //handelPageChange
+  const handlePageChange = (index) => {
+    setPageNumber(index);
+  };
+
   const handleThemeChange = () => {
     setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
   };
@@ -75,11 +80,7 @@ const AppContainer = () => {
             <Sidebar />
           </SidebarContainer>
           <PagesContainer>
-            <SwipeableViews
-              disabled
-              index={pageNumber}
-              onChangeIndex={handlePageNumber}
-            >
+            <SwipeableViews index={pageNumber} onChangeIndex={handlePageChange}>
               <Page pageNumber={pageNumber} index={0}>
                 {/* Home */}
                 <Home helmetTitle="Matin Portfolio | Home Page" />

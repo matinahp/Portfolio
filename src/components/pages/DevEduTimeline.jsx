@@ -17,13 +17,14 @@ const DevEduTimeline = ({ loading }) => {
       <Timeline position="right" sx={{ direction: "ltr" }}>
         {devEdu.map((item, index) => (
           <Slide
+            key={index}
             direction="up"
             in={loading}
             style={{
               transitionDelay: loading ? `${index + 6}99ms` : "0ms",
             }}
           >
-            <TimelineItem key={index}>
+            <TimelineItem>
               <TimelineOppositeContent color="text.secondary" sx={{ mt: 2 }}>
                 {item.year}
               </TimelineOppositeContent>
